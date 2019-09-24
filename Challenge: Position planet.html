@@ -1,0 +1,45 @@
+/* Step 1: Use absolute positioning to put the creature on top of the planet somewhere.*/
+
+/* Step 2: Position the greeting on top of the planet as well.*/
+
+/* Step 3: Use a z-index property to make sure that the greeting always shows up over the creature, not behind.*/
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Position planet</title>
+        <style>
+            #greeting {
+                background: rgb(255, 255, 0);
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                padding: 5px;
+                width: 262px;
+                position:absolute;//Step 2
+                top:30px;//Step 2
+                left:105px;//Step 2
+                z-index:2;//Step 3
+            }
+            
+            #creature {
+                position: absolute;//Step 1
+                top:65px;//Step 1
+                left:40px;// Step 1
+                z-index:1;//Step 3
+            }
+        </style>
+    </head>
+    <body>
+        
+        <img id="planet" src="https://www.kasandbox.org/programming-images/space/planet.png" width="300">
+        
+        <div id="greeting">
+            <p>Hello! Welcome to position planet!</p>
+        </div>
+        
+        <img id="creature" src="https://www.kasandbox.org/programming-images/avatars/mr-pink.png">
+        
+
+    </body>
+</html>
